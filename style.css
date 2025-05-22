@@ -1,0 +1,85 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  background-color: #e9f7fb;
+}
+
+.bar.pivot {
+  background-color: orange;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.controls {
+  width: 250px;
+  padding: 20px;
+  background: #a3c2f2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.controls h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.visualizer {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 5px; /* Add spacing between bars */
+  padding: 20px;
+  overflow-x: auto; /* Allow scroll if bars overflow */
+}
+
+
+.bar {
+  min-width: 20px; /* Ensure minimum width */
+  background-color: navy;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  font-size: 12px; /* Make text smaller to fit better */
+  font-weight: bold;
+  position: relative;
+}
+
+/* Display number above the bar */
+.bar span {
+  position: absolute;
+  top: -20px;
+  font-size: 12px;
+  color: white;
+}
+
+
+.bar span {
+  transform: translateY(100%);
+  margin-top: 5px;
+}
+
+.bar.default { background: navy; }
+.bar.compare { background: yellow; }
+.bar.swap { background: red; }
+.bar.sorted { background: green; }
+
+.dark {
+  background-color: #0e1c2e;
+  color: white;
+}
+
+.dark .controls {
+  background: #23395b;
+}
+
+.dark .visualizer {
+  background-color: #1e2a38;
+}

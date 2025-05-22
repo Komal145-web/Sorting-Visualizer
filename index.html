@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="controls">
+        <h3>Performance Metrics</h3>
+<p>Comparisons: <span id="comparison-count">0</span></p>
+<p>Swaps: <span id="swap-count">0</span></p>
+
+      <h2>SORTING VISUALIZATION</h2>
+
+      <label>Dark Mode: <input type="checkbox" id="dark-mode" /></label>
+
+      <label>Input Size</label>
+      <input type="number" id="input-size" min="5" max="100" value="20"/>
+
+      <label>Bar Height</label>
+      <input type="range" id="bar-height" min="100" max="800" value="400"/>
+
+ <label>Sorting Algorithm</label>
+<select id="algorithm">
+  <option value="bubble">Bubble Sort</option>
+  <option value="selection">Selection Sort</option>
+  <option value="insertion">Insertion Sort</option>
+  <option value="merge">Merge Sort</option>
+  <option value="quick">Quick Sort</option>
+  <option value="heap">Heap Sort</option>
+</select>
+
+
+
+<!-- Time and Space Complexity Display -->
+<div style="margin-top: 20px;">
+  <h4>Time Complexity</h4>
+  <p id="time-complexity">-</p>
+  <h4>Space Complexity</h4>
+  <p id="space-complexity">-</p>
+</div>
+
+
+      <label>Speed</label>
+      <input type="range" id="speed" min="1" max="100" value="50" />
+
+      <button id="start">START</button>
+      <button id="pause">PAUSE</button>
+      <button id="resume">RESUME</button>
+    </div>
+
+    <div class="visualizer" id="visualizer"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- Add in HTML -->
+<button id="stop">Stop</button>
+
+</body>
+</html>
